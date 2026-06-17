@@ -3,179 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ישיבת ערב — תרומות</title>
-<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap" rel="stylesheet">
+<title>ישיבת ערב - שותפות בתורה</title>
+<!-- ייבוא ספריית האייקונים -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    direction: rtl;
-    font-family: 'David Libre', serif;
-    background: #faf8f4;
-    color: #2a1f0e;
-    min-height: 100vh;
-    padding: 2rem 1rem;
-  }
-  .page { max-width: 720px; margin: 0 auto; }
-
-  .header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e0d5c0;
-  }
-  .logo-circle {
-    width: 72px; height: 72px; border-radius: 50%;
-    background: #7c5c2a;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 1rem;
-    font-size: 34px;
-  }
-  .title { font-size: 30px; font-weight: 700; color: #3a2808; margin-bottom: 0.4rem; }
-  .subtitle { font-size: 16px; color: #6b5233; line-height: 1.7; }
-
-  .section-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: #8a6a30;
-    letter-spacing: 1.5px;
-    margin-bottom: 0.9rem;
-    margin-top: 1.8rem;
-    padding-right: 2px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-    margin-bottom: 0.5rem;
-  }
-  .grid-full { grid-template-columns: 1fr; }
-
-  .card {
-    background: #fff;
-    border: 1px solid #e0d5c0;
-    border-radius: 14px;
-    padding: 1.1rem 1.25rem;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    color: inherit;
-  }
-  .card:hover {
-    border-color: #b8872a;
-    box-shadow: 0 0 0 3px #b8872a18;
-    text-decoration: none;
-  }
-  .card-icon { font-size: 22px; margin-bottom: 2px; }
-  .card-name { font-size: 15px; font-weight: 700; color: #2a1f0e; line-height: 1.4; }
-  .card-amount { font-size: 13px; color: #8a6a30; font-weight: 500; }
-
-  .card-general {
-    background: #fdf5e6;
-    border-color: #c9943a;
-  }
-  .card-general .card-name { color: #5a3c0a; }
-
-  .footer {
-    text-align: center;
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #e0d5c0;
-    font-size: 13px;
-    color: #8a7055;
-  }
-
-  @media (max-width: 480px) {
-    .grid { grid-template-columns: 1fr; }
-    .title { font-size: 24px; }
-  }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header {
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        padding: 0 20px;
+    }
+    .header h1 {
+        font-size: 3rem;
+        color: #ffd700;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        margin-bottom: 15px;
+    }
+    .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 35px; /* הוגדל המרווח בין הכרטיסים */
+        width: 90%;
+        max-width: 1200px;
+        margin-bottom: 80px;
+    }
+    .donation-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        border-radius: 20px;
+        padding: 40px 25px; /* הוגדל הריווח הפנימי כדי לתת "אוויר" */
+        text-align: center;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .donation-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(255, 215, 0, 0.9);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+    .card-icon {
+        font-size: 2.5rem;
+        color: #ffd700;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+    .card-price {
+        font-size: 1.5rem;
+        color: #ffd700;
+        margin-bottom: 25px;
+        font-weight: bold;
+    }
+    .donate-btn {
+        background: linear-gradient(45deg, #d4af37, #f3e5ab);
+        color: #1a1a1a;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: opacity 0.3s, transform 0.2s;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+    }
+    .donate-btn:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
 </style>
 </head>
 <body>
-<div class="page">
 
-  <div class="header">
-    <div class="logo-circle">🕍</div>
-    <div class="title">ישיבת ערב</div>
-    <div class="subtitle">תמכו בלומדי תורה — כל תרומה מחזקת עולם של לימוד</div>
-  </div>
-
-  <!-- חד פעמי -->
-  <div class="section-label">הזכרה ורכישת ספרים — חד פעמי</div>
-  <div class="grid">
-
-    <a class="card" href="LINK_HAZKARA" target="_blank">
-      <div class="card-icon">✨</div>
-      <div class="card-name">הזכרת שם לברכה בכל הסניפים</div>
-      <div class="card-amount">100 ₪ — חד פעמי</div>
-    </a>
-
-    <a class="card" href="LINK_GMAROT" target="_blank">
-      <div class="card-icon">📖</div>
-      <div class="card-name">רכישת גמרות לחברותא</div>
-      <div class="card-amount">120 ₪</div>
-    </a>
-
-    <a class="card" href="LINK_MISHNAYOT" target="_blank">
-      <div class="card-icon">📜</div>
-      <div class="card-name">רכישת משניות לחברותא</div>
-      <div class="card-amount">100 ₪</div>
-    </a>
-
-    <a class="card" href="LINK_HALACHA" target="_blank">
-      <div class="card-icon">📚</div>
-      <div class="card-name">רכישת ספרי הלכה לחברותא</div>
-      <div class="card-amount">120 ₪</div>
-    </a>
-
-  </div>
-
-  <!-- חודשי -->
-  <div class="section-label">תמיכה חודשית קבועה</div>
-  <div class="grid">
-
-    <a class="card" href="LINK_CHAVRUTAH" target="_blank">
-      <div class="card-icon">🤝</div>
-      <div class="card-name">החזקת חברותא</div>
-      <div class="card-amount">300 ₪ לחודש</div>
-    </a>
-
-    <a class="card" href="LINK_SHIUR" target="_blank">
-      <div class="card-icon">🎓</div>
-      <div class="card-name">החזקת שיעור תורה</div>
-      <div class="card-amount">800 ₪ לחודש</div>
-    </a>
-
-    <a class="card" href="LINK_KIBUD" target="_blank">
-      <div class="card-icon">🫖</div>
-      <div class="card-name">כיבוד ללומדים בישיבת ערב</div>
-      <div class="card-amount">400 ₪ לחודש</div>
-    </a>
-
-    <a class="card" href="LINK_SNIF" target="_blank">
-      <div class="card-icon">🏛️</div>
-      <div class="card-name">פתיחת סניף חדש של ישיבת ערב</div>
-      <div class="card-amount">1,800 ₪ לחודש</div>
-    </a>
-
-  </div>
-
-  <!-- כללי -->
-  <div class="section-label">תרומה חופשית</div>
-  <div class="grid grid-full">
-    <a class="card card-general" href="LINK_GENERAL" target="_blank">
-      <div class="card-icon">💛</div>
-      <div class="card-name">תרומה כללית — בכל סכום שתרצו</div>
-      <div class="card-amount">עזרו לנו להמשיך ולהתרחב</div>
-    </a>
-  </div>
-
-  <div class="footer">
-    <p>כל תרומה מחזקת תורה ולומדיה 🙏</p>
-  </div>
-
+<div class="header">
+    <h1>שותפות בישיבת הערב</h1>
+    <p>זכות גדולה של תמיכה בלומדי תורה - בחרו את מסלול התרומה שלכם</p>
 </div>
+
+<div class="container">
+    <div class="donation-card">
+        <i class="fa-solid fa-scroll card-icon"></i>
+        <div class="card-title">הזכרת שם לברכה בכל הסניפים למשך שבוע</div>
+        <div class="card-price">100 ₪</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה חד פעמית</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-book card-icon"></i>
+        <div class="card-title">רכישת משניות לחברותא</div>
+        <div class="card-price">100 ₪</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה חד פעמית</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-book-open card-icon"></i>
+        <div class="card-title">רכישת גמרות לחברותא</div>
+        <div class="card-price">120 ₪</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה חד פעמית</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-scale-balanced card-icon"></i>
+        <div class="card-title">רכישת ספרי הלכה לחברותא</div>
+        <div class="card-price">120 ₪</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה חד פעמית</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-user-group card-icon"></i>
+        <div class="card-title">החזקת חברותא</div>
+        <div class="card-price">300 ₪ / חודש</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה חודשית</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-mug-hot card-icon"></i>
+        <div class="card-title">כיבוד ללומדים בישיבת ערב</div>
+        <div class="card-price">400 ₪ / חודש</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה חודשית</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-users-rectangle card-icon"></i>
+        <div class="card-title">החזקת שיעור תורה</div>
+        <div class="card-price">800 ₪ / חודש</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה חודשית</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-building-columns card-icon"></i>
+        <div class="card-title">פתיחת סניף חדש של ישיבת ערב</div>
+        <div class="card-price">1,800 ₪ / חודש</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה חודשית</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-hand-holding-heart card-icon"></i>
+        <div class="card-title">ישיבת ערב - תרומה למען המוסד</div>
+        <div class="card-price">סכום פתוח</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה</a>
+    </div>
+
+    <div class="donation-card">
+        <i class="fa-solid fa-seedling card-icon"></i>
+        <div class="card-title">תרומה כללית</div>
+        <div class="card-price">סכום פתוח</div>
+        <a href="הכנס_קישור_תשלום_כאן" class="donate-btn">לתרומה</a>
+    </div>
+</div>
+
 </body>
 </html>
